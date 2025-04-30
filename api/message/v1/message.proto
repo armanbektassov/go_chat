@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package message_v1;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+option go_package = "github.com/armanbektassov/go_chat/pkg/message/v1/;message_v1";
+
+service MessageV1 {
+  rpc SendMessage(SendMessageRequest) returns (google.protobuf.Empty);
+}
+
+message Message {
+  int64 id = 1;
+  MessageInfo Info = 2;
+  google.protobuf.Timestamp created_at = 3;
+  google.protobuf.Timestamp updated_at = 4;
+}
+
+message MessageInfo {
+  int64 chat_id = 1;
+  string creator = 2;
+  string text = 3;
+}
+
+
+message SendMessageRequest {
+  MessageInfo messageInfo = 1;
+  google.protobuf.Timestamp timestamp = 2;
+}
