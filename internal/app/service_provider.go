@@ -6,10 +6,6 @@ import (
 
 	"github.com/armanbektassov/go_chat/internal/api/chat"
 	"github.com/armanbektassov/go_chat/internal/api/message"
-	"github.com/armanbektassov/go_chat/internal/client/db"
-	"github.com/armanbektassov/go_chat/internal/client/db/pg"
-	"github.com/armanbektassov/go_chat/internal/client/db/transaction"
-	"github.com/armanbektassov/go_chat/internal/closer"
 	"github.com/armanbektassov/go_chat/internal/config"
 	"github.com/armanbektassov/go_chat/internal/repository"
 	chatRepository "github.com/armanbektassov/go_chat/internal/repository/chat"
@@ -17,6 +13,10 @@ import (
 	"github.com/armanbektassov/go_chat/internal/service"
 	chatService "github.com/armanbektassov/go_chat/internal/service/chat"
 	messageService "github.com/armanbektassov/go_chat/internal/service/message"
+	"github.com/armanbektassov/platform_common/pkg/client/db"
+	"github.com/armanbektassov/platform_common/pkg/client/db/pg"
+	"github.com/armanbektassov/platform_common/pkg/client/db/transaction"
+	"github.com/armanbektassov/platform_common/pkg/closer"
 )
 
 type serviceProvider struct {

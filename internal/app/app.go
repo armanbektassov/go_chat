@@ -9,10 +9,10 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/reflection"
 
-	"github.com/armanbektassov/go_chat/internal/closer"
 	"github.com/armanbektassov/go_chat/internal/config"
 	chatdesc "github.com/armanbektassov/go_chat/pkg/chat_v1"
 	messagedesc "github.com/armanbektassov/go_chat/pkg/message_v1"
+	"github.com/armanbektassov/platform_common/pkg/closer"
 )
 
 type App struct {

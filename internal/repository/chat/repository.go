@@ -5,10 +5,10 @@ import (
 	sq "github.com/Masterminds/squirrel"
 	modelRepo "github.com/armanbektassov/go_chat/internal/repository/chat/model"
 
-	"github.com/armanbektassov/go_chat/internal/client/db"
 	"github.com/armanbektassov/go_chat/internal/model"
 	"github.com/armanbektassov/go_chat/internal/repository"
 	"github.com/armanbektassov/go_chat/internal/repository/chat/converter"
+	"github.com/armanbektassov/platform_common/pkg/client/db"
 )
 
 const (
